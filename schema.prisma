@@ -1,0 +1,30 @@
+model Credential {
+  id    String @id @default(uuid())
+  token String
+}
+
+model Chat {
+  id       String  @id @default(uuid())
+  name     String
+  username String?
+  active   Boolean @default(false)
+  chatId   String  @unique
+  lastMessageId String?
+}
+
+model SessionMap {
+  id        String   @id @default(uuid())
+  chatId    String   @unique
+  sessionId String
+  updatedAt DateTime @default(now())
+}
+
+model Setting {
+  id             String  @id @default(uuid())
+  startMessage   String
+  publicEnabled  Boolean @default(false)
+  specialistId   String?
+  adminModel     String?
+  publicModel    String?
+  defaultChatId  String?
+}

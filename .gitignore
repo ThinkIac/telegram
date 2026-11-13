@@ -1,0 +1,30 @@
+# Credenciais e configuração local
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Estado do bot e dados pessoais de chats
+.private/
+.database
+.logos/
+.generated/
+data/
+storage/
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+chats*.json
+sessions*.json
+contacts*.json
+profiles*.json
+exports/
+attachments/
+uploads/
+
+# Logs e arquivos temporários
+logs/
+*.log
+.DS_Store
